@@ -1,0 +1,40 @@
+1. git - github account
+2. text editor
+3. Inteli J - paid edition
+
+text editors:
+	sublime
+	vs code
+	notepad++
+	atom
+	
+
+HTML -
+	address bar -> ms.lv -> 192.168.0.1 IPv4
+				in future will be IPv6
+				
+	DNS servers - domain nomain servers
+	
+	
+	Maksim - teacher
+		8 - gadu pieredze
+		5 - gadus programe programmas algota darba
+	
+	Dan
+	Janis
+	Artis
+	Artjom
+	??X?
+	Igor
+	
+	
+	HTML - hypertext markup language
+		Browser wars 
+		
+	CSS - cascading style sheets
+		
+	JS - javascript
+	WASM or  WEBM - web assembly
+	
+	All html docs starts with
+		<!DOCTYPE hmtl>

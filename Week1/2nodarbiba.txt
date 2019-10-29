@@ -1,0 +1,15 @@
+css
+sass - needs to be compiled for css
+
+iekš google dev tools ir stilu meklētājs
+
+how to center element in element HORIZONTALY:
+    margin: auto; {browser automatically adjust so right and left margin so }
+    
+responisve: 
+    display: flex;
+
+
+
+GIT - version control system
+
