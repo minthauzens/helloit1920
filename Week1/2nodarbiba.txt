@@ -11,5 +11,7 @@ responisve:
 
 
 
-GIT - version control system
+GIT - versioning control system
+    source of truth - central versioning system
 
+    
