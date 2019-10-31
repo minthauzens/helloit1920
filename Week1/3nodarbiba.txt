@@ -1,0 +1,7 @@
+relative path - this is best practice
+absolute path - copy all global path from "C://Users/Valters/Desktop/Helloit/Week1";
+
+
+MENU
+    
+
