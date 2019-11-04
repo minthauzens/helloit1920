@@ -5,25 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HelloIT - JS tutorial</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <input type="number" name="celsius" id="celsius">
-    <button id="convert" onclick="convert()">Convert</button>
-    <div id="result">
-
+    <div class="container">
+        <div class="row d-flex justify-content-around">
+            <div class="column">
+                <div>
+                    <input type="number" name="celsius" id="celsius">
+                    <button class="btn btn-danger" id="convert" onclick="convert()">Convert</button>
+                </div>
+                <div style="height: 15px;"></div>
+                <div>
+                    <input type="text" name="myName" id="name">
+                    <button class="btn btn-primary" id="hello" onclick="greeting()">Hello</button>
+                </div>
+                
+                <div id="result">
+            
+                </div>
+            </div>
+            <div class="column">
+                <div>
+                    <input type="number" name="number" id="number1">
+                    ( + - * /)
+                    <input type="number" name="number" id="number2">
+                </div>
+                <div>
+                    <button class="btn btn-primary" id="add" onclick="add()">+</button>
+                    <button class="btn btn-primary" id="subtract" onclick="subtract()">-</button>
+                    <button class="btn btn-primary" id="multiply" onclick="multiply()">*</button>
+                    <button class="btn btn-primary" id="division" onclick="division()">/</button>
+                </div>
+                <div id="result2">
+                </div>
+            </div>
+        </div>
     </div>
+    
     <script type="text/javascript">
         // T(°F) = T(°C) × 9/5 + 32
         function convert() {
-            let celsius = document.getElementById("celsius").value;
+            let celsius = Number(document.getElementById("celsius").value);
 
             console.log("Celsius: " + celsius);
 
-            let farenheit = Number(celsius) * 9/5 + 32;
+            let farenheit = celsius * 9/5 + 32;
 
             console.log("Farenheit: " + farenheit);
 
-            let kelvin = Number(celsius) + 273.15;
+            let kelvin = celsius + 273.15;
 
             let string1 = "Farenheit : " + farenheit + "\n" + "Kelvin: " + kelvin;
 
@@ -32,6 +64,53 @@
             document.getElementById("result").innerHTML = string1;
 
             console.log("CONVERT!");
+        }
+
+        function test() {
+            let a = 6;
+
+            // HelloIT bootcamp - JS first lesson:
+                // next time should start with variable types and that is it loosly typed programming language
+                // easier to understand operators in my opinion.
+
+            // two operations to divide arithemtics
+                // 7 / 4 = 1 (java int?)
+                // 7 / 4 = 1.75; (java double?)
+
+                // this is more deal with int and doubles then division
+
+
+        }
+
+        function greeting(){
+            let nameString = document.getElementById("name").value;
+
+            document.getElementById("result").innerHTML = "Hello " + nameString;
+        }
+        
+        function add() {
+            let a = Number(document.getElementById("number1").value);
+            let b = Number(document.getElementById("number2").value);
+
+            document.getElementById("result2").innerHTML = a + b;
+        }
+        function subtract() {
+            let a = Number(document.getElementById("number1").value);
+            let b = Number(document.getElementById("number2").value);
+
+            document.getElementById("result2").innerHTML = a - b;
+        }
+        function multiply() {
+            let a = Number(document.getElementById("number1").value);
+            let b = Number(document.getElementById("number2").value);
+
+            document.getElementById("result2").innerHTML = a * b;
+        }
+        function division() {
+            let a = Number(document.getElementById("number1").value);
+            let b = Number(document.getElementById("number2").value);
+
+            document.getElementById("result2").innerHTML = a / b;
         }
 
     </script>
