@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tic-tac-toe</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col" data-field="1" onclick="makeMove(event)"></div>
+            <div class="col" data-field="2" onclick="makeMove(event)"></div>
+            <div class="col" data-field="3" onclick="makeMove(event)"></div>
+        </div>
+        <div class="row">
+            <div class="col" data-field="4" onclick="makeMove(event)"></div>
+            <div class="col" data-field="5" onclick="makeMove(event)"></div>
+            <div class="col" data-field="6" onclick="makeMove(event)"></div>
+        </div>
+        <div class="row">
+            <div class="col" data-field="7" onclick="makeMove(event)"></div>
+            <div class="col" data-field="8" onclick="makeMove(event)"></div>
+            <div class="col" data-field="9" onclick="makeMove(event)"></div>
+        </div>
+    </div>
+
+    <script>
+        // status of the gameField
+        var gameField = [];
+        // who moves now?
+        // x / o
+        var move = 'X';
+
+        function makeMove(e){
+            field = Number(e.target.getAttribute("data-field"));
+            // console.log(field);
+            if (gameField[field]) {
+                color(e.target);
+                gameField[field] = move;
+                changePlayer();
+                console.log(gameField);
+            }
+        }
+
+        function changePlayer() {
+            if (move == 'X') {
+                move = 'O';
+            } else {
+                move = 'X';
+            }
+        }
+
+        function color(element) {
+            if (move == "X"){
+                element.setAttribute("style", "background-color: red;");
+            } else {
+                element.setAttribute("style", "background-color: blue;");
+            }
+        }
+    </script>
+</body>
+</html>

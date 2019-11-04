@@ -32,13 +32,15 @@
                     ( + - * /)
                     <input type="number" name="number" id="number2">
                 </div>
-                <div>
+                <div class="d-flex justify-content-around">
                     <button class="btn btn-primary" id="add" onclick="add()">+</button>
                     <button class="btn btn-primary" id="subtract" onclick="subtract()">-</button>
                     <button class="btn btn-primary" id="multiply" onclick="multiply()">*</button>
                     <button class="btn btn-primary" id="division" onclick="division()">/</button>
                 </div>
                 <div id="result2">
+                    <br>
+                    <p>test</p>
                 </div>
             </div>
         </div>
@@ -87,30 +89,31 @@
 
             document.getElementById("result").innerHTML = "Hello " + nameString;
         }
+
+        function calculate(callback) {
+            document.getElementById("result").innerHTML = callback(getNum1(), getNum2());
+        }
+
+        function getNum1() {
+            return Number(document.getElementById("number1").value);
+        }
+
+        function getNum2() {
+            return Number(document.getElementById("number2").value);
+        }
         
         function add() {
-            let a = Number(document.getElementById("number1").value);
-            let b = Number(document.getElementById("number2").value);
-
-            document.getElementById("result2").innerHTML = a + b;
+            calculate(num1, num2 => num1 + num2);
         }
-        function subtract() {
-            let a = Number(document.getElementById("number1").value);
-            let b = Number(document.getElementById("number2").value);
 
-            document.getElementById("result2").innerHTML = a - b;
+        function subtract() {
+            calculate(num1, num2 => num1 - num2);
         }
         function multiply() {
-            let a = Number(document.getElementById("number1").value);
-            let b = Number(document.getElementById("number2").value);
-
-            document.getElementById("result2").innerHTML = a * b;
+            calculate(num1, num2 => num1 * num2);
         }
         function division() {
-            let a = Number(document.getElementById("number1").value);
-            let b = Number(document.getElementById("number2").value);
-
-            document.getElementById("result2").innerHTML = a / b;
+            calculate(num1, num2 => num1 / num2);
         }
 
     </script>

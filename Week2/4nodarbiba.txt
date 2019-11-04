@@ -1,2 +1,6 @@
 JS - the BEGINING!
 
+    function variables can be functions
+        so you can define 
+
+        
