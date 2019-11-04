@@ -20,3 +20,13 @@ FONT AWESOME
 git log
     to leave SHIFT-Q or Q
 
+
+git revert 
+
+git checkout
+    can you make changes and save them?
+    how to commit?
+
+    create new branch then move to master and merge?
+
+git reset
