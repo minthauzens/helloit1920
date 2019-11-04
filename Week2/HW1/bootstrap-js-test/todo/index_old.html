@@ -1,0 +1,44 @@
+<!-- home.test:80
+runcis.test:80 -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Runcis</title>
+	<style>
+.sub_btn {
+	background-color: black;
+	color: aquamarine;
+}
+.sub_btn:hover {
+	background-color: aquamarine;
+	color: black;
+}
+
+
+
+</style>
+</head>
+<body>
+	Man garšo tuncis.
+	<form action="/compare"
+		enctype="multipart/form-data"
+		method="POST">
+		file1
+		<input type="file" name="file1" value="file1"><br>
+		file2
+		<input type="file" name="file2" value="file2"><br>
+		<input type="radio" name="algorithm" value="line">Lines<br>
+		<input type="radio" name="algorithm" value="sentences">Sentences<br>
+		<input type="radio" name="algorithm" value="substrings">Substrings<br>
+		<input type="number" name="length" value="length" placeholder="substring length"><br>
+		TIME:
+		<br>
+		<input type="time" name="time"><br>
+		<br>
+		<input class="sub_btn" type="submit" name="COMPARE">
+	</form>
+</body>
+</html>

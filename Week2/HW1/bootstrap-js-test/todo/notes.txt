@@ -1,0 +1,3 @@
+DOM - dokument, object, model
+
+TODO LIST implement
