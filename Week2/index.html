@@ -13,8 +13,25 @@
 
     </div>
     <script type="text/javascript">
+        // T(°F) = T(°C) × 9/5 + 32
         function convert() {
-            console.log("CONVERT!")
+            let celsius = document.getElementById("celsius").value;
+
+            console.log("Celsius: " + celsius);
+
+            let farenheit = Number(celsius) * 9/5 + 32;
+
+            console.log("Farenheit: " + farenheit);
+
+            let kelvin = Number(celsius) + 273.15;
+
+            let string1 = "Farenheit : " + farenheit + "\n" + "Kelvin: " + kelvin;
+
+            console.log(string1);
+
+            document.getElementById("result").innerHTML = string1;
+
+            console.log("CONVERT!");
         }
 
     </script>
