@@ -1,0 +1,22 @@
+relative path - this is best practice
+absolute path - copy all global path from "C://Users/Valters/Desktop/Helloit/Week1";
+
+
+MENU
+
+BOOTSTRAP
+FONT AWESOME
+
+BOOTSTRAP
+    how to get into your project:
+        1) download and link into the needed file, (the library is on you pc now)
+        2) CDN with html link
+
+CSS - !important:
+
+
+FONT AWESOME
+
+git log
+    to leave SHIFT-Q or Q
+
