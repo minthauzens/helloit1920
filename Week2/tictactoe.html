@@ -5,26 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>tic-tac-toe</title>
-    
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="gameBoard">
         <div class="row">
+            <div class="col" data-field="0" onclick="makeMove(event)"></div>
             <div class="col" data-field="1" onclick="makeMove(event)"></div>
             <div class="col" data-field="2" onclick="makeMove(event)"></div>
-            <div class="col" data-field="3" onclick="makeMove(event)"></div>
         </div>
         <div class="row">
+            <div class="col" data-field="3" onclick="makeMove(event)"></div>
             <div class="col" data-field="4" onclick="makeMove(event)"></div>
             <div class="col" data-field="5" onclick="makeMove(event)"></div>
-            <div class="col" data-field="6" onclick="makeMove(event)"></div>
         </div>
         <div class="row">
+            <div class="col" data-field="6" onclick="makeMove(event)"></div>
             <div class="col" data-field="7" onclick="makeMove(event)"></div>
             <div class="col" data-field="8" onclick="makeMove(event)"></div>
-            <div class="col" data-field="9" onclick="makeMove(event)"></div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col" id="messageBoard"></div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col" style="border: none; font-weight: bolder; text-align: center; font-size: 3 em;">
+                <button class="btn btn-primary" onclick="resetGameBoard()">RESET GAME BOARD</button>
+            </div>
         </div>
     </div>
 
@@ -34,15 +48,26 @@
         // who moves now?
         // x / o
         var move = 'X';
+        // to make board not interactable when game ends:
+        // complete - true, interactable -
+        var interactable = true;
+        whoMoves();
 
         function makeMove(e){
+            if(interactable == false){
+                return console.log("game is finished!");
+            }
             field = Number(e.target.getAttribute("data-field"));
             // console.log(field);
-            if (gameField[field]) {
+            if (!gameField[field]) {
+                // console.log('clicked');
                 color(e.target);
                 gameField[field] = move;
+                if (testCompletion() ){
+                    endGame();
+                }
                 changePlayer();
-                console.log(gameField);
+                // console.log(gameField);
             }
         }
 
@@ -52,6 +77,9 @@
             } else {
                 move = 'X';
             }
+            if (interactable) {
+                whoMoves();
+            }
         }
 
         function color(element) {
@@ -60,6 +88,89 @@
             } else {
                 element.setAttribute("style", "background-color: blue;");
             }
+        }
+
+        function endGame() {
+            let message = "!!!!! WINNER - PLAYER " + move + " !!!!!";
+            messageBoard(message);
+            interactable = false;
+        }
+
+        function whoMoves() {
+            let message = "NOW TURN OF PLAYER " + move;
+            messageBoard(message);
+        }
+
+        function messageBoard(message) {
+            document.getElementById("messageBoard").innerText = message;
+            color(document.getElementById("messageBoard"));
+        }
+
+        function resetGameBoard() {
+            move = "X";
+            gameField = [];
+            let children = document.getElementById("gameBoard").children;
+            // console.log(children);
+            for (let i = 0; i < children.length; i++) {
+                let grandChilder = children[i].children
+                for (let i = 0; i < grandChilder.length; i++) {
+                    grandChilder[i].removeAttribute("style");
+                }
+            }
+            document.getElementById("messageBoard").innerText = "";
+            document.getElementById("messageBoard").setAttribute("style", "border: none;");
+            interactable = true;
+            whoMoves();
+            // go trough each child of gameBoard and reset their style;
+            // go trough messageBoard as well;
+
+        }
+
+        function testCompletion() {
+            /*
+            how to test if the game is finished?
+                1) check all possible solutions:
+                    012
+                    345
+                    678
+
+                    036
+                    147
+                    258
+
+                    048
+                    246
+
+                2) check adjacent elements if they are the same?
+
+                */
+
+            if ((gameField[0] == gameField[1] && gameField[0] == gameField[2] && gameField[0])
+            ||  (gameField[3] == gameField[4] && gameField[3] == gameField[5] && gameField[3])
+            ||  (gameField[6] == gameField[7] && gameField[6] == gameField[8] && gameField[6])
+            ||  (gameField[0] == gameField[3] && gameField[0] == gameField[6] && gameField[0])
+            ||  (gameField[1] == gameField[4] && gameField[1] == gameField[7] && gameField[1])
+            ||  (gameField[2] == gameField[5] && gameField[2] == gameField[8] && gameField[2])
+            ||  (gameField[0] == gameField[4] && gameField[0] == gameField[8] && gameField[0])
+            ||  (gameField[2] == gameField[4] && gameField[2] == gameField[6] && gameField[2])
+            ) {
+                // console.log("END!");
+                return true;
+            } else {
+                return false;
+            }
+
+
+
+                /*
+
+                *) Add colorful border to the winning combination
+                *) Display winner name
+                *) Make button reset game board
+                *) Display if draw
+
+                *) make button play vs bot
+             */
         }
     </script>
 </body>
