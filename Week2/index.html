@@ -38,9 +38,8 @@
                     <button class="btn btn-primary" id="multiply" onclick="multiply()">*</button>
                     <button class="btn btn-primary" id="division" onclick="division()">/</button>
                 </div>
+                <br>
                 <div id="result2">
-                    <br>
-                    <p>test</p>
                 </div>
             </div>
         </div>
@@ -91,7 +90,7 @@
         }
 
         function calculate(callback) {
-            document.getElementById("result").innerHTML = callback(getNum1(), getNum2());
+            document.getElementById("result2").innerHTML = callback(getNum1(), getNum2());
         }
 
         function getNum1() {
@@ -103,17 +102,17 @@
         }
         
         function add() {
-            calculate(num1, num2 => num1 + num2);
+            calculate((num1, num2) => num1 + num2);
         }
 
         function subtract() {
-            calculate(num1, num2 => num1 - num2);
+            calculate((num1, num2) => num1 - num2);
         }
         function multiply() {
-            calculate(num1, num2 => num1 * num2);
+            calculate((num1, num2) => num1 * num2);
         }
         function division() {
-            calculate(num1, num2 => num1 / num2);
+            calculate((num1, num2) => num1 / num2);
         }
 
     </script>
