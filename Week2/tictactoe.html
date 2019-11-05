@@ -51,6 +51,7 @@
         // to make board not interactable when game ends:
         // complete - true, interactable -
         var interactable = true;
+        var turn = 1;
         whoMoves();
 
         function makeMove(e){
@@ -68,6 +69,9 @@
                 }
                 changePlayer();
                 // console.log(gameField);
+                if (turn > 9) {
+                    draw();
+                }
             }
         }
 
@@ -80,6 +84,7 @@
             if (interactable) {
                 whoMoves();
             }
+            turn++;
         }
 
         function color(element) {
@@ -101,6 +106,13 @@
             messageBoard(message);
         }
 
+        function draw() {
+            let message = "!!!!! DRAW !!!!!";
+            document.getElementById("messageBoard").innerText = message;
+            document.getElementById("messageBoard").setAttribute("style", "background-color: lightgray;");
+            interactable = false;
+        }
+
         function messageBoard(message) {
             document.getElementById("messageBoard").innerText = message;
             color(document.getElementById("messageBoard"));
@@ -109,6 +121,7 @@
         function resetGameBoard() {
             move = "X";
             gameField = [];
+            turn = 1;
             let children = document.getElementById("gameBoard").children;
             // console.log(children);
             for (let i = 0; i < children.length; i++) {
@@ -154,7 +167,7 @@
             ||  (gameField[0] == gameField[4] && gameField[0] == gameField[8] && gameField[0])
             ||  (gameField[2] == gameField[4] && gameField[2] == gameField[6] && gameField[2])
             ) {
-                // console.log("END!");
+                console.log(gameField.length);
                 return true;
             } else {
                 return false;
