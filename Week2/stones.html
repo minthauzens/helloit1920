@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DO YOU WANT TO PLAY A GAME</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="stonesStyles.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col mb-5">
+                <div class="row" id="gameSetupContainer">
+                    <div class="col">
+                        <label for="maxStones">How many stones do you want to start with?</label>
+                        <br>
+                        <input type="number" name="maxStones" id="maxStones" placeholder="20">
+                        <br>
+                        PLAY:
+                        <br>
+                        <input type="radio" name="versus" id="versusHuman" value='true' >
+                        <label for="versusHuman">VS Human</label>
+                        <br>
+                        OR
+                        <br>
+                        <input type="radio" name="versus" id="versusBot" value='false' checked>
+                        <label for="versusBot">VS Bot</label>
+                        <br>
+                        If vs bot: who has first turn:
+                        <br>
+                        <input type="radio" name="turn1" id="turn1Human" value='true' >
+                        <label for="turn1Human">Human</label>
+                        <br>
+                        OR
+                        <br>
+                        <input type="radio" name="turn1" id="turn1Bot" value='false' checked>
+                        <label for="turn1Bot">Bot</label>
+                        <div class="row" id="startGameDiv">
+                            <div class="col">
+                                <button class="btn btn-primary" onclick="startGame()">START GAME</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row d-none" id="gamePlayContainer"> -->
+                <div class="row" id="gamePlayContainer">
+                    <div class="col">
+                        <!-- TODO: GAMEPLAY HERE -->
+                        <div class="row">
+                            <div class="col">STONE COUNT:
+                                <span class="font-weight-bold" id="stoneCount"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                TAKE:
+                                <div class="btn-group-justified">
+                                    <button class="btn btn-primary take" onclick="take(1)">1</button>
+                                    <button class="btn btn-primary take" onclick="take(2)">2</button>
+                                    <button class="btn btn-primary take" onclick="take(3)">3</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <span class="font-weight-bold">HISTORY:</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <ol id="history"></ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col align-self-end col-4 mb-5">
+                <h3>RULES:</h3>
+                <p>This is a two player game with alternating turns.</p>
+                <p>Each turn a player can take 1 - 3 stones from the total.</p>
+                <p>The player who takes the last stone win the game.</p>
+                <p>The game on this site is playable 1 vs 1 or vs computer.</p>
+            </div>
+        </div>
+    </div>
+    <script src="./stones.js"></script>
+</body>
+
+</html>

@@ -113,6 +113,7 @@
                 i++;
             }
             console.log(fibonaciArray);
+            
         }
 
         fibArray = [1, 2];
@@ -120,11 +121,6 @@
         function fib(num) {
             if (num == 1 || num == 2) {
                 return num;
-                // } else if (fibArray[num]){
-                //     return fibArray;
-                // }
-                // fibs[num - 1] = !(fibArray[n-1]) : fibArray[n-1] ? fib (num -1);
-                // fibs[num - 2] = !(fibArray[n-2]) : fibArray[n-2] ? fib (num -2);
                 return fib(num - 1) + fib(num - 2);
             }
         }
