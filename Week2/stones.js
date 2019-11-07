@@ -81,8 +81,10 @@ function take(num) {
 
 function botTurn() {
     // check if can take
+    // this returns number from 1 - 3
     let ran3;
     do {
+        // Math.random return values in range of [0 - 1)
         ran3 = Math.floor(Math.random() * 2) + 1; 
     } while (ran3 > currentStoneCount)
     take(ran3);
@@ -97,7 +99,9 @@ function checkEndGame() {
     if (currentStoneCount === 0) {
         winner = (isPlayer1Turn) ? "1" : "2";
         alert("winner player " + winner);
-        // disableTake();
+        disableTake();
+        // to stop the bot from making infinite loop
+        vsHuman = true;
     }
 }
 
