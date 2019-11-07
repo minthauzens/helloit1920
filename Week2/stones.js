@@ -16,7 +16,7 @@ function startGame() {
 
     
 
-    if (isHumanTurn()){
+    if (!isHumanTurn()){
         botTurn();
     }
 
@@ -36,7 +36,7 @@ function isHumanTurn() {
         || (!isPlayer1Human && !isPlayer1Turn)) {
             console.log("HUMAN TURN")
         return true;
-    } else{
+    } else {
         console.log("BOT TURN")
         return false;
     }
@@ -84,7 +84,7 @@ function botTurn() {
     let ran3;
     do {
         ran3 = Math.floor(Math.random() * 2) + 1; 
-    } while (ran3 <= currentStoneCount)
+    } while (ran3 > currentStoneCount)
     take(ran3);
 
 }
