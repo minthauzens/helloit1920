@@ -11,7 +11,7 @@ function startGame() {
     isPlayer1Turn = true;
     isPlayer1Human = getWhoHasFirstTurn();
     // turn = 1;
-    // ! toggleVisibility();
+    toggleVisibility();
     displayStoneCount();
 
     
