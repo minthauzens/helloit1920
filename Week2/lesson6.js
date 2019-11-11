@@ -66,18 +66,67 @@ function colorChange() {
 
     $('#colorME').css('background-color', `rgb(${red}, ${blue}, ${green})`);
     
-    if (lock) {
-        clearTimeout(lock)
-    }
+    // if (lock) {
+    //     clearTimeout(lock)
+    // }
 
-    // sadi lai butu tikai pedeja vertiba
+    // // sadi lai butu tikai pedeja vertiba
+    // // setTimeout - izsauc funckiju pec timeout
+    // lock = setTimeout(() => console.log("Delayed"), 2000);
 
-    lock = setTimeout(() => console.log("Delayed"), 2000);
+    
     
 }
 
+function onPress() {
+    setInterval(() => {
+        colorChange();
+    }, 100);
+}
+
 $(window).on('load', () => {
-    $('#colorME').click(colorChange)
-    console.log('test123')
+    // onPress();
+    getJoke();
+    // $('#colorME').click(colorChange)
+    // console.log('test123')
 })
+
+// difficult to understand when to give function and when to give testFun() and when testFun
+
+/* 
+    each every HTTP request consists of:
+    HTTP request:
+        0. Type
+        1. Address
+        2. Headers
+        3. Body
+
+    HTTP resonse:
+        1. Headers
+        2. Body
+
+    publicly available REST API
+
+    Postman - 
+    Advanced REST client
+*/
+
+function getJoke() {
+    const url = 'http://api.icndb.com/jokes/random';
+    const joke = $.get(url, (response) => {
+        console.log(response)
+        $('body').append(response.value.joke)
+    });
+    //this line would not display joke
+    console.log(joke.responseJSON);
+
+    setTimeout(()=>console.log(joke.responseJSON), 500);
+
+    // js asyncron programming language
+    // FOR REQUESTS - have to wait for result!!!!!
+
+}
+
+
+/// API - application programming interface
 
