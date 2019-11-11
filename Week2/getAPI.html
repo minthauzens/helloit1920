@@ -6,14 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LEASURLY JS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-    <h1>Some title..... </h1> 
-    <div class="operators">
-        <button onclick="getARandomDrink()">I JUST NEED A DRINK RIGHT NOW</button>
+    <h1 style='text-align: center;'>Some title..... </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="operators">
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-primary" onclick="getARandomJoke()" title='returns a random joke'>I NEED A LAUGH</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <select name="categories" id="categoriesSelect">
+                                <option value="" disabled selected>Please select a category</option>
+                            </select>
+                            <button class="btn btn-primary" onclick="getAJokeByCategory()" title='returns a random joke from selected category'>JOKE BY SELECTED
+                                CATEGORY</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" name="textQuery" id="textQuery" placeholder="Free Search">
+                            <button class="btn btn-primary" onclick="get10JokesByQuery()" title='returns only first 10 results'>FIND ME A JOKE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" id="contentContainer">
+            </div>
+        </div>
     </div>
-    <div class="content"></div>
 
     <!-- get jQuerry -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
