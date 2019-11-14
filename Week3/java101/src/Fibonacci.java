@@ -21,7 +21,7 @@ public class Fibonacci {
 
     }
 
-    private static long sumTillNthElement(int n){
+    private static long sumTillNthElement(int n) {
         long sum = fibonacci1 + fibonacci2;
         long fib1 = fibonacci1;
         long fib2 = fibonacci2;
