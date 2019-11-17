@@ -22,6 +22,7 @@ public class MyClass {
 
     private static int sum(int[] array) {
         int sumElements = 0;
+
         for (int el : array) {
             sumElements += el;
         }

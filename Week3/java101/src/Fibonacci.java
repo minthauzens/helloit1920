@@ -6,8 +6,6 @@ public class Fibonacci {
 
 
     public static void main(String[] args) {
-//        var sumFibonacci = new Fibonacci();
-
         Scanner scanner = new Scanner(System.in);
         System.out.println("Sum of fibonacci numbers till which N-th element: ");
         System.out.println("(enter integer, please)");
@@ -15,10 +13,7 @@ public class Fibonacci {
 
         System.out.println(fibonacci1);
         System.out.println(fibonacci2);
-
         System.out.println("sum: " + sumTillNthElement(n));
-
-
     }
 
     private static long sumTillNthElement(int n) {
