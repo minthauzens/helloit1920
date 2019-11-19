@@ -36,6 +36,7 @@ public class SchoolManagement {
                 default:
                     System.out.println("Invalid input! ");
                     System.out.println();
+                    break;
             }
         }
     }
@@ -43,9 +44,7 @@ public class SchoolManagement {
     private static void addStudent(Scanner scanner) throws IOException {
         System.out.println("Student name and surname: ");
         String student = scanner.nextLine();
-//        System.out.println(SCHOOL_FOLDER + student);
         File studentFile = new File(SCHOOL_FOLDER + student);
-//        System.out.println(studentFile.exists());
         if (studentFile.exists()) {
             System.out.println("Student already exists");
         } else {
@@ -76,9 +75,6 @@ public class SchoolManagement {
                     int grade = Integer.parseInt(gradeInput);
                     writer.write(grade + "\n");
                     System.out.println("Add more grades? \n(if input is not a number will exit)");
-//                String test = scanner.next();
-//                if (test.equals("n")) {
-//                    input = false;
                 }
 //                }
             } while (input);
@@ -92,42 +88,44 @@ public class SchoolManagement {
         File[] students = schoolFolder.listFiles();
 
         HashMap<String, Double> studentsMap = new HashMap<>();
-        // get student name
-        assert students != null;
-        for (File student : students) {
-            if (!student.isDirectory()) {
-                // calculate average grade
-                double average = calculateAverageGrade(student);
-                // TODO: GET key name;
-                String key = student.getName();
-                studentsMap.put(key, average);
-            }
-        }
-        // save the data into map (?)
-        int counter = 0;
-        while (studentsMap.size() > 0) {
-
-
-            // sort map
-            double max = -1 * Double.MAX_VALUE;
-            // maxKey - student name with max value
-            String maxKey = null;
-            counter++;
-            for (String el : studentsMap.keySet()) {
-                if (studentsMap.get(el) > max) {
-                    max = studentsMap.get(el);
-                    maxKey = el;
+        if (students == null) {
+            System.out.println("No students into the school system!");
+        } else {
+            for (File student : students) {
+                if (!student.isDirectory()) {
+                    // calculate average grade
+                    double average = calculateAverageGrade(student);
+                    // TODO: GET key name;
+                    // get student name
+                    String key = student.getName();
+                    studentsMap.put(key, average);
                 }
             }
-            // print out the map
-            // max == -1 when student has no grades
-            if (max == -1) {
-                System.out.println(counter + ". " + maxKey + ": NaN");
-            } else {
-                System.out.println(counter + ". " + maxKey + ": " + max);
+            int counter = 0;
+            while (studentsMap.size() > 0) {
+
+
+                // sort map
+                double max = -1 * Double.MAX_VALUE;
+                // maxKey - student name with max value
+                String maxKey = null;
+                counter++;
+                for (String el : studentsMap.keySet()) {
+                    if (studentsMap.get(el) > max) {
+                        max = studentsMap.get(el);
+                        maxKey = el;
+                    }
+                }
+                // print out the map
+                // max == -1 when student has no grades
+                if (max == -1) {
+                    System.out.println(counter + ". " + maxKey + ": NaN");
+                } else {
+                    System.out.println(counter + ". " + maxKey + ": " + max);
+                }
+                // we remove student so next one could be found
+                studentsMap.remove(maxKey);
             }
-            // we remove student so next one could be found
-            studentsMap.remove(maxKey);
         }
     }
 
