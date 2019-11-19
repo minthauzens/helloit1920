@@ -5,7 +5,19 @@ public class FileExample {
     private static final String FILE_GUEST_BOOK_NAME = "guestBook";
 
     public static void main(String[] args) {
-
+        int num = 5;
+        System.out.printf("Hello World %d", num);
+        /* PRINT F:
+            ! % + letter will be replaced with variable
+            %d - digit (ints and the like)
+            %f - float
+            %s - string
+            %S - string transform(UPPERCASE)
+            %t - time (we will see more about this in the future)
+            %b - boolean (lower case)
+            %B - also boolean (UPPER CASE)
+            %10.2f
+        */
     }
 
     public static void readGuests() throws IOException {

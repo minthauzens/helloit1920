@@ -3,6 +3,8 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class SchoolManagement {
+    // should address be with / or with \\
+    // ".\\schoolManagement\\"
     private final static String SCHOOL_FOLDER = "./schoolManagement/";
     private static boolean isRunning = true;
 
