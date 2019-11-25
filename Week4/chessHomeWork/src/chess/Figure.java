@@ -8,10 +8,6 @@ public abstract class Figure {
         this.color = color;
     }
 
-    public Figure() {
-        this.color = PlayerColors.WHITE;
-    }
-
     @Override
     public String toString() {
         return String.valueOf(icon());
