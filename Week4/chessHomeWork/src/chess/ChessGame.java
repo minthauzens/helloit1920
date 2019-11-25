@@ -5,5 +5,9 @@ public class ChessGame {
         // RUN GAME
         Board board = new Board();
         board.print();
+        for (int i = 0; i < 3; i++) {
+            board.move();
+            board.print();
+        }
     }
 }
