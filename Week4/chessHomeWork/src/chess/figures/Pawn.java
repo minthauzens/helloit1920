@@ -1,17 +1,17 @@
 package chess.figures;
 
 import chess.Figure;
-import chess.PlayerColors;
+import chess.Player;
 
 public class Pawn extends Figure {
 
-    public Pawn(PlayerColors color) {
+    public Pawn(Player color) {
         super(color);
     }
 
     @Override
     public char icon() {
-        if (color == PlayerColors.WHITE) {
+        if (color == Player.WHITE) {
             return '\u2659';
         }
         return '\u265F';

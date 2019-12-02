@@ -1,16 +1,16 @@
 package chess.figures;
 
 import chess.Figure;
-import chess.PlayerColors;
+import chess.Player;
 
 public class Knight extends Figure {
-    public Knight(PlayerColors color) {
+    public Knight(Player color) {
         super(color);
     }
 
     @Override
     public char icon() {
-        if (color == PlayerColors.WHITE){
+        if (color == Player.WHITE){
             return '\u2658';
         }
         return '\u265E';

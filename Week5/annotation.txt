@@ -1,0 +1,20 @@
+Annotations:
+	they are just helpers for other developers or java
+
+
+
+	compile time annotation
+	run time annotation
+
+
+
+	@Override
+	@Depricated(since = "", forRemoval = true) // forRemoval = true -> next release going to remove this feature
+
+
+THESE ANNOTATIONS ARE FOR ANNOTATIONS
+	@Target (where we can place this annotation, to what we can apply it)
+	@Retention (RetentionPolicy.Source)
+	@Retention (RetentionPolicy.Runtime)
+
+	

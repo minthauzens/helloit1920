@@ -1,16 +1,16 @@
 package chess.figures;
 
 import chess.Figure;
-import chess.PlayerColors;
+import chess.Player;
 
 public class Bishop extends Figure {
-    public Bishop(PlayerColors color) {
+    public Bishop(Player color) {
         super(color);
     }
 
     @Override
     public char icon() {
-        if (color == PlayerColors.WHITE) {
+        if (color == Player.WHITE) {
             return '\u2657';
         }
         return '\u265D';

@@ -8,10 +8,12 @@ class Board {
 
     private Figure[][] board;
     private Scanner scanner;
+    private Player currentPlayer;
 
     Board() {
         this.board = new Figure[8][8];
         this.scanner = new Scanner(System.in);
+        this.currentPlayer = Player.WHITE;
         fillBoard();
     }
 
@@ -20,34 +22,34 @@ class Board {
 
         // PAWNS
         for (int i = 0; i < 8; i++) {
-            board[1][i] = new Pawn(PlayerColors.WHITE);
-            board[6][i] = new Pawn(PlayerColors.BLACK);
+            board[1][i] = new Pawn(Player.WHITE);
+            board[6][i] = new Pawn(Player.BLACK);
         }
         // ROOKS
-        board[0][0] = new Rook(PlayerColors.WHITE);
-        board[0][7] = new Rook(PlayerColors.WHITE);
-        board[7][0] = new Rook(PlayerColors.BLACK);
-        board[7][7] = new Rook(PlayerColors.BLACK);
+        board[0][0] = new Rook(Player.WHITE);
+        board[0][7] = new Rook(Player.WHITE);
+        board[7][0] = new Rook(Player.BLACK);
+        board[7][7] = new Rook(Player.BLACK);
 
         // KNIGHTS
-        board[0][1] = new Knight(PlayerColors.WHITE);
-        board[0][6] = new Knight(PlayerColors.WHITE);
-        board[7][1] = new Knight(PlayerColors.BLACK);
-        board[7][6] = new Knight(PlayerColors.BLACK);
+        board[0][1] = new Knight(Player.WHITE);
+        board[0][6] = new Knight(Player.WHITE);
+        board[7][1] = new Knight(Player.BLACK);
+        board[7][6] = new Knight(Player.BLACK);
 
         // BISHOPS
-        board[0][2] = new Bishop(PlayerColors.WHITE);
-        board[0][5] = new Bishop(PlayerColors.WHITE);
-        board[7][2] = new Bishop(PlayerColors.BLACK);
-        board[7][5] = new Bishop(PlayerColors.BLACK);
+        board[0][2] = new Bishop(Player.WHITE);
+        board[0][5] = new Bishop(Player.WHITE);
+        board[7][2] = new Bishop(Player.BLACK);
+        board[7][5] = new Bishop(Player.BLACK);
 
         // QUEENS
-        board[0][3] = new Queen(PlayerColors.WHITE);
-        board[7][3] = new Queen(PlayerColors.BLACK);
+        board[0][3] = new Queen(Player.WHITE);
+        board[7][3] = new Queen(Player.BLACK);
 
         // KINGS
-        board[0][4] = new King(PlayerColors.WHITE);
-        board[7][4] = new King(PlayerColors.BLACK);
+        board[0][4] = new King(Player.WHITE);
+        board[7][4] = new King(Player.BLACK);
 
     }
 
@@ -78,6 +80,7 @@ class Board {
     }
 
     void move() {
+        printPlayer();
         // get user input
         int colFrom = getInputColumnString("From which column? [A-H]");
         int rowFrom = getInputRowInt("From which row? [1-8]");
@@ -85,6 +88,19 @@ class Board {
         int rowTo = getInputRowInt("To which row? [1-8]");
 
         moveFigure(colFrom, rowFrom, colTo, rowTo);
+        changePlayer();
+    }
+
+    private void printPlayer() {
+        System.out.println("Current player: " + currentPlayer);
+    }
+
+    private void changePlayer() {
+        if (this.currentPlayer == Player.WHITE) {
+            this.currentPlayer = Player.BLACK;
+        } else {
+            this.currentPlayer = Player.WHITE;
+        }
     }
 
     private void moveFigure(int colFrom, int rowFrom, int colTo, int rowTo) {

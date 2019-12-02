@@ -2,9 +2,9 @@ package chess;
 
 public abstract class Figure {
     public abstract char icon();
-    protected PlayerColors color;
+    protected Player color;
 
-    public Figure(PlayerColors color) {
+    public Figure(Player color) {
         this.color = color;
     }
 
