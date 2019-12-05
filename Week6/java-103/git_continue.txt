@@ -1,0 +1,4 @@
+GIT
+	what happens when two user make changes to the same time?
+
+	git reset to unstage
