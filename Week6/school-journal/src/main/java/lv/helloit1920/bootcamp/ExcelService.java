@@ -25,7 +25,8 @@ public class ExcelService {
             XSSFWorkbook workbook = new XSSFWorkbook();
             // TODO: loop trough subjects and make a new subject with name matching sheet title;
             // TODO: insert cell titles
-            XSSFSheet sheet = workbook.createSheet("Subject-name");
+            String placeholder = "Subject - name";
+            XSSFSheet sheet = workbook.createSheet(placeholder);
             int i = 0;
             for (Student student : journal.students.values()) {
                 XSSFRow row = sheet.createRow(i);

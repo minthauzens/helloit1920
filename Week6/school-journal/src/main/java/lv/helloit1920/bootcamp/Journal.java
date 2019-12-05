@@ -1,7 +1,8 @@
 package lv.helloit1920.bootcamp;
 
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Journal {
     HashMap<String, Student> students;
@@ -15,34 +16,18 @@ public class Journal {
     }
 
     public void printStudents() {
-        ArrayList<Student> sortedStudents = new ArrayList<>();
-        HashMap<String, Student> base= new HashMap<>();
-        for (String name : students.keySet()) {
-            base.put(name, students.get(name));
-        }
-        while (base.size() > 0) {
-            String maxName = getStudentWithMaxValue(base);
-            Student max = base.get(maxName);
-            base.remove(maxName);
-            sortedStudents.add(max);
-        }
+//        ArrayList<Student> sortedStudents = new ArrayList<>();
+        List<Student> sortedStudents = students.values().stream().sorted((student1, student2) -> {
+            var avg1 = student1.getAverageGrade();
+            var avg2 = student2.getAverageGrade();
+            return Double.compare(avg1, avg2);
+        }).collect(Collectors.toList());
+
         for (Student sortedStudent : sortedStudents) {
             System.out.println(sortedStudent);
         }
     }
 
-    private String getStudentWithMaxValue(HashMap<String, Student> base) {
-        double max = - Double.MAX_VALUE;
-        String maxStudentName = null;
-        for (String studentName : base.keySet()) {
-            Student student = base.get(studentName);
-            if (student.getAverageGrade() > max) {
-                max = student.getAverageGrade();
-                maxStudentName = studentName;
-            }
-        }
-        return maxStudentName;
-    }
 
     public Student getStudent(String name) {
         if (!this.students.containsKey(name)) {
