@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="784a6c2d-33d5-4d83-9567-ce925a4392be" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Week6/MavenLesson2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week6/MavenLesson2/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week6/MavenLesson2/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week6/MavenLesson2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week6/MavenLesson2/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week6/MavenLesson2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week6/MavenLesson2/MavenLesson2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week6/MavenLesson2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week6/MavenLesson2/src/main/java/lv/helloit/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week6/MavenLesson2/src/main/java/lv/helloit/BowlingGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week6/MavenLesson2/src/main/java/lv/helloit/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week6/MavenLesson2/src/main/java/lv/helloit/Frame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week6/MavenLesson2/src/main/java/lv/helloit/Modifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week6/MavenLesson2/src/main/java/lv/helloit/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week6/MavenLesson2/src/test/java/lv/helloit/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week6/MavenLesson2/src/test/java/lv/helloit/BowlingGameTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week6/MavenLesson2/src/test/java/lv/helloit/CalculatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week6/school-journal/Testing" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lv/helloit/bootcamp/Cipher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lv/helloit/bootcamp/XorCipher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lv/helloit/bootcamp/CipherTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lv/helloit/bootcamp/XorCipherTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week6/school-journal/src/main/java/lv/helloit1920/bootcamp/JournalUserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week6/school-journal/src/main/java/lv/helloit1920/bootcamp/JournalUserInterface.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="practice" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1UkpYWVL4SPiI5UnUjOCVbWeFCY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="lv.helloit.bootcamp" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.XorCipherTest.encrypt">
+    <configuration name="CipherTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="practice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lv.helloit.bootcamp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lv.helloit.bootcamp" />
+      <option name="MAIN_CLASS_NAME" value="lv.helloit.bootcamp.CipherTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CypherTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="practice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lv.helloit.bootcamp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lv.helloit.bootcamp" />
+      <option name="MAIN_CLASS_NAME" value="lv.helloit.bootcamp.CypherTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CypherTest.shouldEncrypt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="practice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lv.helloit.bootcamp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lv.helloit.bootcamp" />
+      <option name="MAIN_CLASS_NAME" value="lv.helloit.bootcamp.CypherTest" />
+      <option name="METHOD_NAME" value="shouldEncrypt" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CypherTest.shouldEncryptViginere" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="practice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lv.helloit.bootcamp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lv.helloit.bootcamp" />
+      <option name="MAIN_CLASS_NAME" value="lv.helloit.bootcamp.CypherTest" />
+      <option name="METHOD_NAME" value="shouldEncryptViginere" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XorCipherTest.encrypt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="practice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lv.helloit.bootcamp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lv.helloit.bootcamp" />
+      <option name="MAIN_CLASS_NAME" value="lv.helloit.bootcamp.XorCipherTest" />
+      <option name="METHOD_NAME" value="encrypt" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.XorCipherTest.encrypt" />
+        <item itemvalue="JUnit.CipherTest" />
+        <item itemvalue="JUnit.CypherTest" />
+        <item itemvalue="JUnit.CypherTest.shouldEncryptViginere" />
+        <item itemvalue="JUnit.CypherTest.shouldEncrypt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="784a6c2d-33d5-4d83-9567-ce925a4392be" name="Default Changelist" comment="" />
+      <created>1575910494945</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575910494945</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="93" y="93" width="1350" height="648" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1575914035711">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="93" y="93" width="1350" height="648" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.834@0.0.1536.834" timestamp="1575914035711" />
+    <state width="1537" height="214" key="GridCell.Tab.0.bottom" timestamp="1575919379668">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1537" height="214" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1575919379668" />
+    <state width="1537" height="214" key="GridCell.Tab.0.center" timestamp="1575919379668">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1537" height="214" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1575919379668" />
+    <state width="1537" height="214" key="GridCell.Tab.0.left" timestamp="1575919379668">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1537" height="214" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1575919379668" />
+    <state width="1537" height="214" key="GridCell.Tab.0.right" timestamp="1575919379668">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1537" height="214" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1575919379668" />
+    <state x="299" y="73" key="Maven.ArtifactSearchDialog" timestamp="1575913366954">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="299" y="73" key="Maven.ArtifactSearchDialog/0.0.1536.834@0.0.1536.834" timestamp="1575913366954" />
+    <state x="277" y="0" key="SettingsEditor" timestamp="1575912587295">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1575912587295" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1575918938097">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1536.834@0.0.1536.834" timestamp="1575918938097" />
+    <state x="579" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575918610586">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="579" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1575918610586" />
+    <state x="540" y="132" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1575918617870">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="540" y="132" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.834@0.0.1536.834" timestamp="1575918617870" />
+    <state x="380" y="127" width="775" height="580" key="find.popup" timestamp="1575915960755">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="380" y="127" width="775" height="580" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1575915960755" />
+  </component>
+</project>
