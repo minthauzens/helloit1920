@@ -1,0 +1,18 @@
+Testing
+	needs to be done by another
+		because you have designed the system for your self
+	blackbox testing
+		tester doesnt know how it works on the inside (it is better, so tester is more likely to find bugs)
+		the same as end user
+
+
+	//////////
+	whitebox testing
+
+	tests must be repeatable
+	tests shouldn't affect other tests
+
+	how to name your tests
+		should use the same way how it is used in project
+
+	

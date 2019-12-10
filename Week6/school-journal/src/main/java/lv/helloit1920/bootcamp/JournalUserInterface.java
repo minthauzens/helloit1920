@@ -80,13 +80,10 @@ public class JournalUserInterface {
         while (true) {
             try {
                 System.out.println("Add grade: ");
-                System.out.println("(input till your next not number input)");
+                System.out.println("(adding grades till input that is not an integer)");
                 int grade = Integer.parseInt(getUserInput());
                 student.addGrade(grade);
             } catch (NumberFormatException e) {
-//                scanner.next();
-                // https://stackoverflow.com/questions/32042391/confusion-with-an-infinite-while-loop-concerning-scanner-nextinte
-                // they wrote so i could ignore next input (don't know if needed, haven't tested)
                 System.out.println("Done adding grades");
                 break;
             }
